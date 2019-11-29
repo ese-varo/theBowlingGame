@@ -31,6 +31,7 @@ playAgainBtn.addEventListener('click', playAgain);
 playAgain();
 
 function playAgain() {
+  runningFrame.textContent = '';
   lastRoll = 0;
   counter = 0;
   bowlingArr = [];
@@ -144,6 +145,7 @@ function captureRolls() {
       } else {
         runningFrame.textContent = "Game Over!!";
         captureBtn.disabled = true;
+        playAgainBtn.disabled = false;
       }
     } else if (counter === 11) {
       lastRoll = parseInt(inFirstRoll.value);
